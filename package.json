@@ -8,7 +8,7 @@
   },
   "type": "module",
   "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider npm run serve",
+    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "x:localhost": "ssh -R 80:localhost:8080 ssh.localhost.run",

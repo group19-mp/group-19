@@ -246,18 +246,6 @@
           </svg>
           <div v-if="unreadMessages" class="unread-msg"></div>
         </sea-link>
-        <button @click="isOpen = !isOpen">
-          Whiteboard
-        </button>
-      </div>
-    </div>
-
-    <div v-if="isOpen">
-      <div class="overlay" @click.self="isOpen=false;">
-        <div class="modal">
-          <button @click="openwhiteboard">Open Whiteboard</button>
-          <div style="width: 600px; height: 550px;" id="wt-container"></div>
-        </div>
       </div>
     </div>
 
@@ -298,7 +286,6 @@ export default {
   },
   data() {
     return {
-      isOpen: false,
       mode: "",
       settings: false,
       share: false,
@@ -328,13 +315,6 @@ export default {
     },
   },
   methods: {
-    openwhiteboard(){
-      console.log("hello");
-      var wt = new api.WhiteboardTeam('#wt-container', {
-            clientId: 'd76b0fd6b33e94906b0a5cfe33f81130',
-            boardCode: 'thisisgroup19testing'
-        });
-    },
     doVideo() {
       this.state.muteVideo = !this.state.muteVideo
       messages.emit("updateStream")
