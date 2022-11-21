@@ -256,7 +256,7 @@
       <div class="overlay" @click.self="isOpen=false;">
         <div class="modal">
           <button @click="openwhiteboard">Open Whiteboard</button>
-          <div style="width: 600px; height: 550px;" id="wt-container"></div>
+          <div style="width: 6gi00px; height: 550px;" id="wt-container"></div>
         </div>
       </div>
     </div>
